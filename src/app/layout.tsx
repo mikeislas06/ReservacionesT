@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Triana Reservaciones",
   description: "Reservaciones Triana",
   icons: [
-    { rel: "icon", url: "/images/icon-192x192.png" },
+    { rel: "icon", url: "/icon-192x192.png" },
   ],
 };
 

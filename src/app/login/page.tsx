@@ -10,7 +10,6 @@ import Input from '@/components/ui/Input'
 
 export default function LoginPage() {
 
-    // 1. This is the Server Action that runs securely on the backend
     const login = async (formData: FormData) => {
         'use server'
 
@@ -24,11 +23,9 @@ export default function LoginPage() {
         })
 
         if (error) {
-            // Handle the error (e.g., redirect with an error parameter)
             redirect('/login?error=true')
         }
 
-        // On success, send them to the Dashboard
         redirect('/')
     }
 
@@ -48,7 +45,7 @@ export default function LoginPage() {
                 </form>
                 <div className='flex flex-row items-center justify-center gap-2 text-text-muted text-xs flex-1'>
                     <p>¿Eres nuevo residente?</p>
-                    <Link href="" className='text-orange-primary underline'>Solicita acceso</Link>
+                    <Link href="/registro" className='text-orange-primary underline'>Solicita acceso</Link>
                 </div>
             </div>
         </>

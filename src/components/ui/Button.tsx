@@ -4,6 +4,7 @@ type Props = {
     variant: 'primary' | 'secondary' | 'outline' | 'disabled';
     fullWidth?: boolean;
     type?: 'button' | 'submit' | 'reset';
+    className?: string;
 }
 
 const variants = {
@@ -14,11 +15,11 @@ const variants = {
 }
 
 export const Button = ({
-    text, variant, fullWidth = true, type = "button"
+    text, variant, fullWidth = true, type = "button", className
 }: Props) => {
     return (
         <button
-            className={`${fullWidth ? "w-full" : ""} rounded-lg shadow-lg p-3 ${variants[variant]}`}
+            className={`${fullWidth ? "w-full" : ""} rounded-lg shadow-lg p-3 ${variants[variant]} ${className}`}
             disabled={variant === 'disabled'}
             type={type}
         >{text}</button>
